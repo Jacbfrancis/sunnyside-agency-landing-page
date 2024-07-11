@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  text-align: center;
+  font-family: "Barlow", sans-serif;
+}
+
+h1, h2, h3, span {
+  font-family: "Fraunces", serif;
+}
+
+h2 {
+  color: hsl(212, 27%, 19%);
+  font-size: 1.8rem;
+  margin: 4rem auto 2rem;
+}
+
+h3 {
+  font-size: large;
+  font-weight: bold;
+}
+
+p {
+  color: hsl(232, 10%, 55%);
+  font-size: large;
+  font-weight: bold;
+  margin: 2rem auto 2rem;
+  line-height: 1.5;
+}
+
+span {
+  color: hsl(212, 27%, 19%);
+  font-size: large;
+  font-weight: bold;
+}
+
+.desktop-img {
+  display: none;
+}
+
+.mobile-img {
+  width: 100%;
+}
+
+header {
+  background-image: url("../images/mobile/image-header.jpg");
+  padding-bottom: 8rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+}
+header nav .nav-list {
+  display: none;
+}
+header h1 {
+  color: hsl(0, 0%, 100%);
+  padding: 5rem 1.7rem 3.5rem;
+  font-size: 3.5rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section .text-container {
+  padding: 2rem 3rem;
+}
+section .transform span {
+  border: 3px solid hsl(51, 100%, 49%);
+  border-style: none none solid;
+  transition: background-color 0.35s ease;
+}
+section .transform span:hover {
+  background-color: hsl(51, 100%, 49%);
+}
+section .standout span {
+  border: 3px solid hsl(7, 99%, 70%);
+  border-style: none none solid;
+  transition: background-color 0.35s ease;
+}
+section .standout span:hover {
+  background-color: hsl(7, 99%, 70%);
+}
+section .graphic-design {
+  background-image: url("../images/mobile/image-graphic-design.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 25rem 1rem 3rem;
+}
+section .graphic-design h2, section .graphic-design p {
+  color: hsl(167, 40%, 24%);
+}
+section .photography {
+  background-image: url("../images/mobile/image-photography.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 25rem 1rem 3rem;
+}
+section .photography h2, section .photography p {
+  color: hsl(198, 62%, 26%);
+}
+
+.bottom-container .testimonials-title {
+  color: hsl(210, 4%, 67%);
+  letter-spacing: 5px;
+  margin: 3rem auto;
+}
+
+.testimonials-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.testimonials-section .testimonials {
+  width: 70%;
+  margin: 2rem auto;
+}
+.testimonials-section .testimonials img {
+  width: 17%;
+  border-radius: 100%;
+}
+.testimonials-section .testimonials p {
+  margin: 2rem auto;
+  line-height: 2;
+}
+.testimonials-section .testimonials h3 {
+  color: hsl(212, 27%, 19%);
+  margin-bottom: 0.5rem;
+}
+.testimonials-section .testimonials span {
+  color: hsl(210, 4%, 67%);
+  font-size: large;
+  font-weight: normal;
+  font-family: "Barlow", sans-serif;
+}
+
+.top-footer {
+  diaplay: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.top-footer img {
+  width: 49%;
+}
+
+@media screen and (min-width: 750px) {
+  .mobile-img {
+    display: none;
+  }
+  .desktop-img {
+    display: inline-flex;
+    width: 50%;
+  }
+  .hamburger-menu {
+    display: none;
+  }
+  header {
+    background-image: url("../images/desktop/image-header.jpg");
+  }
+  header h1 {
+    padding-bottom: 3.5rem;
+  }
+  header nav {
+    padding: 3rem;
+  }
+  header nav .nav-list {
+    display: inline-flex;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  header nav li {
+    margin-right: 3rem;
+  }
+  header nav li a {
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  header nav li a:hover {
+    color: hsl(212, 27%, 19%);
+    text-decoration: underline;
+  }
+  .nav-button {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(212, 27%, 19%);
+    padding: 0.7rem 2.5rem;
+    border-style: none;
+    border-radius: 1.5rem;
+    font-size: 1rem;
+    font-family: "Fraunces", serif;
+    transition: background-color 0.35s ease;
+  }
+  .nav-button a {
+    color: hsl(212, 27%, 19%);
+  }
+  .nav-button:hover {
+    background-color: hsl(212, 27%, 19%);
+  }
+  .nav-button:hover a {
+    color: hsl(0, 0%, 100%);
+  }
+  .top-container {
+    text-align: left;
+  }
+  .section-one {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .section-two, section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .section-two .text-container, section .text-container {
+    width: 50%;
+    padding: 0rem 4rem;
+  }
+  .section-two .graphic-design, section .graphic-design {
+    background-image: url("../images/desktop/image-graphic-design.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 20rem 6rem 2rem;
+    text-align: center;
+  }
+  .section-two .photography, section .photography {
+    background-image: url("../images/desktop/image-photography.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 20rem 6rem 3.5rem;
+    text-align: center;
+  }
+  .testimonials-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .testimonials-section .testimonials {
+    width: 28%;
+  }
+  .top-footer {
+    diaplay: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .top-footer img {
+    width: 24%;
+  }
+}/*# sourceMappingURL=main.css.map */
