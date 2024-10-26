@@ -9,7 +9,8 @@ $primary-colors: (
     yellow: hsl(51, 100%, 49%),
     graphic-design-text: hsl(167, 40%, 24%),
     photography-text: hsl(198, 62%, 26%),
-    footer: hsl(168, 34%, 41%),
+    footer-bg: hsla(168, 60%, 45%, 0.961),
+    footer: hsl(168, 34%, 41%)
 );
 
 $neutral-colors: (
@@ -17,7 +18,7 @@ $neutral-colors: (
     grayish-blue: hsl(213, 9%, 39%),
     dark-grayish-blue: hsl(232, 10%, 55%),
     light-grayish-blue: hsl(210, 4%, 67%),
-    white: hsl(0, 0%, 100%),
+    white: hsl(0, 0%, 100%)
 );
 
 @mixin flex($direction, $position) {

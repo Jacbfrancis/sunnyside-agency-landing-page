@@ -160,6 +160,40 @@ section .photography h2, section .photography p {
   width: 49%;
 }
 
+.bottom-footer {
+  background-color: hsla(168, 60%, 45%, 0.961);
+}
+.bottom-footer .logo {
+  width: 25%;
+  padding: 3rem 0;
+}
+.bottom-footer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-bottom: 4rem;
+  width: 50%;
+  margin: auto;
+}
+.bottom-footer a {
+  color: hsl(168, 34%, 41%);
+  text-decoration: none;
+}
+.bottom-footer a:hover {
+  color: hsl(0, 0%, 100%);
+}
+.bottom-footer .social-icons {
+  padding: 0 1rem 2rem;
+}
+
+.attribution {
+  padding: 1rem;
+}
+
 @media screen and (min-width: 750px) {
   .mobile-img {
     display: none;
@@ -269,5 +303,8 @@ section .photography h2, section .photography p {
   }
   .top-footer img {
     width: 24%;
+  }
+  .bottom-footer .logo {
+    width: 10%;
   }
 }/*# sourceMappingURL=main.css.map */

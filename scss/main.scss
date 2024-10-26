@@ -162,6 +162,45 @@ section{
     @include grid(2);
 }
 
+.bottom-footer{
+    background-color: map-get($primary-colors, footer-bg);
+
+    .logo{
+        width: 25%;
+        padding: 3rem 0;
+    }
+
+    ul{
+        list-style: none;
+        @include flex(row, space-around);
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding-bottom: 4rem;
+        width: 50%;
+        margin: auto;
+    }
+
+    a{
+        color: map-get($primary-colors, footer);
+        text-decoration: none;
+
+        &:hover{
+            color: map-get($neutral-colors, white);
+        }
+    }
+
+    .social-icons{
+        padding: 0 1rem 2rem;
+    }
+    
+}
+
+.attribution{
+    padding: 1rem;
+}
+
+
+// DESKTOP VIEW
 
 @media screen and (min-width: 750px) {
 
@@ -269,4 +308,10 @@ section{
         @include grid(4);
     }
 
-}
+    .bottom-footer{
+        .logo{
+            width: 10%;
+        }
+    }
+
+} 
