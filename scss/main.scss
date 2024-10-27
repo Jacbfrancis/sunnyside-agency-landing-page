@@ -115,6 +115,7 @@ section{
 }
 
 .bottom-container{
+    margin: 5rem 0;
     .testimonials-title{
         color: map-get($neutral-colors, light-grayish-blue);
         letter-spacing: 5px;
@@ -152,6 +153,11 @@ section{
         }
     }
 
+}
+
+footer{
+    display: fixed;
+    bottom: 0;
 }
 
 .top-footer{

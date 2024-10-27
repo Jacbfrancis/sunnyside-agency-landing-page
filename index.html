@@ -8,7 +8,7 @@
   
   <title>Frontend Mentor | Sunnyside agency landing page</title>
   <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
-
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="./scss/main.css">
 </head>
 
@@ -41,7 +41,8 @@
           <img class="mobile-img" src="images/mobile/image-transform.jpg" alt="">
           <img class="desktop-img" src="images/desktop/image-transform.jpg" alt="">
 
-          <div class="transform text-container">
+          <div class="transform text-container" data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom">
             <h2>Transform your brand</h2>
             <p>We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.</p>
               <span>LEARN MORE</span>
@@ -53,7 +54,8 @@
           <img class="mobile-img" src="images/mobile/image-stand-out.jpg" alt="">
           <img class="desktop-img" src="images/mobile/image-stand-out.jpg" alt="">
 
-          <div class="standout text-container">
+          <div class="standout text-container" data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom">
             <h2>Stand out to the right audience</h2>
             <p>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
             <span>LEARN MORE</span>
@@ -78,21 +80,24 @@
         <h3 class="testimonials-title">CLIENT TESTIMONIALS</h3>
 
         <div class="testimonials-section">
-          <div class="testimonials">
+          <div class="testimonials" data-aos="fade-up"
+          data-aos-duration="4000">
             <img class="testimonials-img" src="images/image-emily.jpg" alt="">
             <p>We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
             <h3>Emily R.</h3>
             <span>Marketing Director</span>
           </div>
   
-          <div class="testimonials">
+          <div class="testimonials" data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom">
             <img class="testimonials-img" src="images/image-thomas.jpg" alt="">
             <p>Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
             <h3>Thomas S.</h3>
             <span>Chief Operating Officer</span>
           </div>
   
-          <div class="testimonials">
+          <div class="testimonials" data-aos="fade-up"
+          data-aos-anchor-placement="center-center">
             <img class="testimonials-img" src="images/image-jennie.jpg" alt="">
             <p>Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
             <h3>Jennie F.</h3>
@@ -144,52 +149,9 @@
     
   </main>
 
-  <!--- About
-  Services
-  Projects
-  Contact
-
-  We are creatives
-
-  Transform your brand
-
-  We are a full-service creative agency specializing in helping brands grow fast. 
-  Engage your clients through compelling visuals that do most of the marketing for you.
-
-  Learn more
-
-  Stand out to the right audience
-
-  Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. 
-
-  Learn more
-
-  Graphic design
-  Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
-
-  Photography
-  Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
-
-  Client testimonials
-
-  We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.
-  Emily R.
-  Marketing Director
-
-  Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.
-  Thomas S.
-  Chief Operating Officer
-
-  Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
-  Jennie F.
-  Business Owner
-
-  About
-  Services
-  Projects
-  Contact 
-
-   --->
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

@@ -117,6 +117,9 @@ section .photography h2, section .photography p {
   color: hsl(198, 62%, 26%);
 }
 
+.bottom-container {
+  margin: 5rem 0;
+}
 .bottom-container .testimonials-title {
   color: hsl(210, 4%, 67%);
   letter-spacing: 5px;
@@ -150,6 +153,11 @@ section .photography h2, section .photography p {
   font-size: large;
   font-weight: normal;
   font-family: "Barlow", sans-serif;
+}
+
+footer {
+  display: fixed;
+  bottom: 0;
 }
 
 .top-footer {
