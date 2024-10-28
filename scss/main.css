@@ -11,7 +11,10 @@ body {
   font-family: "Barlow", sans-serif;
 }
 
-h1, h2, h3, span {
+h1,
+h2,
+h3,
+span {
   font-family: "Fraunces", serif;
 }
 
@@ -65,6 +68,47 @@ header nav {
 header nav .nav-list {
   display: none;
 }
+header nav .nav-menu {
+  background-color: hsl(0, 0%, 100%);
+  width: 90%;
+  position: absolute;
+  top: 15%;
+  left: 5%;
+}
+header nav .nav-menu ul {
+  list-style: none;
+  padding: 2rem 0 3rem;
+}
+header nav .nav-menu ul li {
+  padding: 1.5rem 0 0.5rem;
+}
+header nav .nav-menu ul li a {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  font-weight: 600;
+  color: hsl(232, 10%, 55%);
+}
+header nav .nav-menu ul li a:hover {
+  text-decoration: underline;
+}
+header .nav-button {
+  background-color: hsl(51, 100%, 49%);
+  padding: 0.7rem 2.5rem;
+  border-style: none;
+  border-radius: 1.5rem;
+  font-size: 1rem;
+  font-family: "Fraunces", serif;
+  transition: background-color 0.35s ease;
+}
+header .nav-button a {
+  color: hsl(212, 27%, 19%);
+}
+header .nav-button:hover {
+  background-color: hsl(212, 27%, 19%);
+}
+header .nav-button:hover a {
+  color: hsl(0, 0%, 100%);
+}
 header h1 {
   color: hsl(0, 0%, 100%);
   padding: 5rem 1.7rem 3.5rem;
@@ -103,7 +147,8 @@ section .graphic-design {
   background-size: cover;
   padding: 25rem 1rem 3rem;
 }
-section .graphic-design h2, section .graphic-design p {
+section .graphic-design h2,
+section .graphic-design p {
   color: hsl(167, 40%, 24%);
 }
 section .photography {
@@ -113,7 +158,8 @@ section .photography {
   background-size: cover;
   padding: 25rem 1rem 3rem;
 }
-section .photography h2, section .photography p {
+section .photography h2,
+section .photography p {
   color: hsl(198, 62%, 26%);
 }
 
@@ -222,6 +268,9 @@ footer {
   header nav {
     padding: 3rem;
   }
+  header nav .nav-menu {
+    display: none;
+  }
   header nav .nav-list {
     display: inline-flex;
     list-style: none;
@@ -239,27 +288,7 @@ footer {
     font-weight: 600;
   }
   header nav li a:hover {
-    color: hsl(212, 27%, 19%);
     text-decoration: underline;
-  }
-  .nav-button {
-    background-color: hsl(0, 0%, 100%);
-    color: hsl(212, 27%, 19%);
-    padding: 0.7rem 2.5rem;
-    border-style: none;
-    border-radius: 1.5rem;
-    font-size: 1rem;
-    font-family: "Fraunces", serif;
-    transition: background-color 0.35s ease;
-  }
-  .nav-button a {
-    color: hsl(212, 27%, 19%);
-  }
-  .nav-button:hover {
-    background-color: hsl(212, 27%, 19%);
-  }
-  .nav-button:hover a {
-    color: hsl(0, 0%, 100%);
   }
   .top-container {
     text-align: left;
@@ -270,17 +299,20 @@ footer {
     justify-content: space-between;
     align-items: center;
   }
-  .section-two, section {
+  .section-two,
+  section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
-  .section-two .text-container, section .text-container {
+  .section-two .text-container,
+  section .text-container {
     width: 50%;
     padding: 0rem 4rem;
   }
-  .section-two .graphic-design, section .graphic-design {
+  .section-two .graphic-design,
+  section .graphic-design {
     background-image: url("../images/desktop/image-graphic-design.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -288,7 +320,8 @@ footer {
     padding: 20rem 6rem 2rem;
     text-align: center;
   }
-  .section-two .photography, section .photography {
+  .section-two .photography,
+  section .photography {
     background-image: url("../images/desktop/image-photography.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -315,4 +348,11 @@ footer {
   .bottom-footer .logo {
     width: 10%;
   }
+}
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
 }/*# sourceMappingURL=main.css.map */

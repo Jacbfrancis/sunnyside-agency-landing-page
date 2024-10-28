@@ -1,323 +1,353 @@
-@import 'config';
+@import "config";
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-body{
-    text-align: center;
-    font-family: "Barlow", sans-serif;
+body {
+  text-align: center;
+  font-family: "Barlow", sans-serif;
 }
 
-h1, h2, h3, span{
-    font-family: "Fraunces", serif;
+h1,
+h2,
+h3,
+span {
+  font-family: "Fraunces", serif;
 }
 
-h2{
-    color: map-get($neutral-colors, desaturated-blue);
-    font-size: 1.8rem;
-    margin: 4rem auto 2rem;
+h2 {
+  color: map-get($neutral-colors, desaturated-blue);
+  font-size: 1.8rem;
+  margin: 4rem auto 2rem;
 }
 
-h3{
-    font-size: large;
-    font-weight: bold;
+h3 {
+  font-size: large;
+  font-weight: bold;
 }
 
-p{
-    color: map-get($neutral-colors, dark-grayish-blue);
-    font-size: large;
-    font-weight: bold;
-    margin: 2rem auto 2rem;
-    line-height: 1.5;
+p {
+  color: map-get($neutral-colors, dark-grayish-blue);
+  font-size: large;
+  font-weight: bold;
+  margin: 2rem auto 2rem;
+  line-height: 1.5;
 }
 
-span{
-    color: map-get($neutral-colors, desaturated-blue);
-    font-size: large;
-    font-weight: bold;
+span {
+  color: map-get($neutral-colors, desaturated-blue);
+  font-size: large;
+  font-weight: bold;
 }
 
-.desktop-img{
-    display: none;
+.desktop-img {
+  display: none;
 }
 
-.mobile-img{
-    width: 100%;
+.mobile-img {
+  width: 100%;
 }
 
+header {
+  background-image: url("../images/mobile/image-header.jpg");
+  padding-bottom: 8rem;
+  @include backgroundPositioning();
 
-header{
-    background-image: url("../images/mobile/image-header.jpg");
-    padding-bottom: 8rem;
-    @include backgroundPositioning();
+  nav {
+    @include flex(row, space-between);
+    padding: 1.5rem;
 
-    nav{
-        @include flex(row, space-between);
-        padding: 1.5rem;
-
-        .nav-list{
-            display: none;
-        }
+    .nav-list {
+      display: none;
     }
 
-    h1{
-        color: map-get($neutral-colors, white);
-        padding: 5rem 1.7rem 3.5rem;
-        font-size: 3.5rem;
-    }
+    .nav-menu {
+      background-color: map-get($neutral-colors, white);
+      width: 90%;
+      position: absolute;
+      top: 15%;
+      left: 5%;
 
-}
-
-section{
-    @include flex(column, center);  
-
-    .text-container{
-        padding: 2rem 3rem;
-    }
-
-    .transform{
-        span{
-            border: 3px solid map-get($primary-colors, yellow);
-            border-style: none none solid;
-            @include transitionEffect(background-color, yellow);
-        }
-    }
-
-    .standout{
-        span{
-            border: 3px solid map-get($primary-colors, soft-red);
-            border-style: none none solid;
-            @include transitionEffect(background-color, soft-red);
-        }
-    }
-
-    .graphic-design{
-        background-image: url('../images/mobile/image-graphic-design.jpg');
-        @include backgroundPositioning();
-        padding: 25rem 1rem 3rem;
-
-        h2, p{
-            color: map-get($primary-colors, graphic-design-text);
-        }
-
-    }
-
-    .photography{
-        background-image: url('../images/mobile/image-photography.jpg');
-        @include backgroundPositioning();
-        padding: 25rem 1rem 3rem;
-
-        h2, p{
-            color: map-get($primary-colors, photography-text);
-        }
-    }
-}
-
-.bottom-container{
-    margin: 5rem 0;
-    .testimonials-title{
-        color: map-get($neutral-colors, light-grayish-blue);
-        letter-spacing: 5px;
-        margin: 3rem auto;
-    }
-}
-
-.testimonials-section{
-    @include flex(column, space-between);
-
-    .testimonials{
-        width: 70%;
-        margin: 2rem auto;
-
-        img{
-            width: 17%;
-            border-radius: 100%;
-        }
-    
-        p{
-            margin: 2rem auto;
-            line-height: 2;
-        }
-    
-        h3{
-            color: map-get($neutral-colors, desaturated-blue);
-            margin-bottom: 0.5rem;
-        }
-
-        span{
-            color: map-get($neutral-colors, light-grayish-blue);
-            font-size: large;
-            font-weight: normal;
-            font-family: "Barlow", sans-serif;
-        }
-    }
-
-}
-
-footer{
-    display: fixed;
-    bottom: 0;
-}
-
-.top-footer{
-    img{
-        width: 49%;
-    }
-
-    @include grid(2);
-}
-
-.bottom-footer{
-    background-color: map-get($primary-colors, footer-bg);
-
-    .logo{
-        width: 25%;
-        padding: 3rem 0;
-    }
-
-    ul{
+      ul {
         list-style: none;
-        @include flex(row, space-around);
-        font-size: 1.2rem;
-        font-weight: bold;
-        padding-bottom: 4rem;
-        width: 50%;
-        margin: auto;
-    }
+        padding: 2rem 0 3rem;
 
-    a{
-        color: map-get($primary-colors, footer);
-        text-decoration: none;
-
-        &:hover{
-            color: map-get($neutral-colors, white);
+        li {
+          padding: 1.5rem 0 0.5rem;
+          a {
+            @include linkStyle();
+            color: map-get($neutral-colors, dark-grayish-blue);
+          }
         }
+      }
+    }
+  }
+
+  .nav-button {
+    background-color: map-get($primary-colors, yellow);
+    padding: 0.7rem 2.5rem;
+    border-style: none;
+    border-radius: 1.5rem;
+    font-size: 1rem;
+    font-family: "Fraunces", serif;
+    @include transitionEffect(background-color, desaturated-blue);
+    & a {
+      color: map-get($neutral-colors, desaturated-blue);
     }
 
-    .social-icons{
-        padding: 0 1rem 2rem;
+    &:hover {
+      background-color: map-get($neutral-colors, desaturated-blue);
+      a {
+        color: map-get($neutral-colors, white);
+      }
     }
-    
+  }
+
+  h1 {
+    color: map-get($neutral-colors, white);
+    padding: 5rem 1.7rem 3.5rem;
+    font-size: 3.5rem;
+  }
 }
 
-.attribution{
-    padding: 1rem;
+section {
+  @include flex(column, center);
+
+  .text-container {
+    padding: 2rem 3rem;
+  }
+
+  .transform {
+    span {
+      border: 3px solid map-get($primary-colors, yellow);
+      border-style: none none solid;
+      @include transitionEffect(background-color, yellow);
+    }
+  }
+
+  .standout {
+    span {
+      border: 3px solid map-get($primary-colors, soft-red);
+      border-style: none none solid;
+      @include transitionEffect(background-color, soft-red);
+    }
+  }
+
+  .graphic-design {
+    background-image: url("../images/mobile/image-graphic-design.jpg");
+    @include backgroundPositioning();
+    padding: 25rem 1rem 3rem;
+
+    h2,
+    p {
+      color: map-get($primary-colors, graphic-design-text);
+    }
+  }
+
+  .photography {
+    background-image: url("../images/mobile/image-photography.jpg");
+    @include backgroundPositioning();
+    padding: 25rem 1rem 3rem;
+
+    h2,
+    p {
+      color: map-get($primary-colors, photography-text);
+    }
+  }
 }
 
+.bottom-container {
+  margin: 5rem 0;
+  .testimonials-title {
+    color: map-get($neutral-colors, light-grayish-blue);
+    letter-spacing: 5px;
+    margin: 3rem auto;
+  }
+}
+
+.testimonials-section {
+  @include flex(column, space-between);
+
+  .testimonials {
+    width: 70%;
+    margin: 2rem auto;
+
+    img {
+      width: 17%;
+      border-radius: 100%;
+    }
+
+    p {
+      margin: 2rem auto;
+      line-height: 2;
+    }
+
+    h3 {
+      color: map-get($neutral-colors, desaturated-blue);
+      margin-bottom: 0.5rem;
+    }
+
+    span {
+      color: map-get($neutral-colors, light-grayish-blue);
+      font-size: large;
+      font-weight: normal;
+      font-family: "Barlow", sans-serif;
+    }
+  }
+}
+
+footer {
+  display: fixed;
+  bottom: 0;
+}
+
+.top-footer {
+  img {
+    width: 49%;
+  }
+
+  @include grid(2);
+}
+
+.bottom-footer {
+  background-color: map-get($primary-colors, footer-bg);
+
+  .logo {
+    width: 25%;
+    padding: 3rem 0;
+  }
+
+  ul {
+    list-style: none;
+    @include flex(row, space-around);
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding-bottom: 4rem;
+    width: 50%;
+    margin: auto;
+  }
+
+  a {
+    color: map-get($primary-colors, footer);
+    text-decoration: none;
+
+    &:hover {
+      color: map-get($neutral-colors, white);
+    }
+  }
+
+  .social-icons {
+    padding: 0 1rem 2rem;
+  }
+}
+
+.attribution {
+  padding: 1rem;
+}
 
 // DESKTOP VIEW
 
 @media screen and (min-width: 750px) {
+  .mobile-img {
+    display: none;
+  }
+  .desktop-img {
+    display: inline-flex;
+    width: 50%;
+  }
 
-    .mobile-img{
-        display: none;
+  .hamburger-menu {
+    display: none;
+  }
+
+  header {
+    background-image: url("../images/desktop/image-header.jpg");
+
+    h1 {
+      padding-bottom: 3.5rem;
     }
-    .desktop-img{
+
+    nav {
+      padding: 3rem;
+
+      .nav-menu {
+        display: none;
+      }
+
+      .nav-list {
         display: inline-flex;
-        width: 50%;
-    }
-    
-    .hamburger-menu{
-        display: none;
-    }
-
-    header{
-        background-image: url('../images/desktop/image-header.jpg');
-
-        h1{
-            padding-bottom: 3.5rem;
+        list-style: none;
+        @include flex(row, center);
+      }
+      li {
+        margin-right: 3rem;
+        a {
+          @include linkStyle();
         }
+      }
+    }
+  }
 
-        nav{
-            padding: 3rem;
+  .top-container {
+    text-align: left;
+  }
 
-            .nav-list{
-                display: inline-flex;
-                list-style: none;
-                @include flex(row, center);
-            }
-            li{
-                margin-right: 3rem;
-                a{
-                    @include linkStyle();
-                }
-            }
-        }        
+  .section-one {
+    @include flex(row-reverse, space-between);
+  }
+
+  .section-two,
+  section {
+    @include flex(row, space-between);
+
+    .text-container {
+      width: 50%;
+      padding: 0rem 4rem;
     }
 
-    .nav-button{
-        background-color: map-get($neutral-colors, white);
-        color: map-get($neutral-colors, desaturated-blue);
-        padding: 0.7rem 2.5rem;
-        border-style: none;
-        border-radius: 1.5rem;
-        font-size: 1rem;
-        font-family: "Fraunces", serif;
-        @include transitionEffect(background-color, desaturated-blue);
-        & a{
-            color: map-get($neutral-colors, desaturated-blue);
-        }
-
-        &:hover{
-            background-color: map-get($neutral-colors, desaturated-blue);
-            a{
-                color: map-get($neutral-colors, white);
-            }
-        }
+    .graphic-design {
+      background-image: url("../images/desktop/image-graphic-design.jpg");
+      @include backgroundPositioning();
+      padding: 20rem 6rem 2rem;
+      text-align: center;
     }
 
-    .top-container{
-        text-align: left
+    .photography {
+      background-image: url("../images/desktop/image-photography.jpg");
+      @include backgroundPositioning();
+      padding: 20rem 6rem 3.5rem;
+      text-align: center;
+    }
+  }
+
+  .testimonials-section {
+    @include flex(row, space-between);
+
+    .testimonials {
+      width: 28%;
+    }
+  }
+
+  .top-footer {
+    img {
+      width: 24%;
     }
 
-    .section-one{
-        @include flex(row-reverse, space-between);
+    @include grid(4);
+  }
+
+  .bottom-footer {
+    .logo {
+      width: 10%;
     }
+  }
+}
 
-    .section-two, section{
-        @include flex(row, space-between);
+.visible {
+  display: block;
+}
 
-        .text-container{
-            width: 50%;
-            padding: 0rem 4rem;
-        }
-
-        .graphic-design{
-            background-image: url('../images/desktop/image-graphic-design.jpg');
-            @include backgroundPositioning();
-            padding: 20rem 6rem 2rem;
-            text-align: center;
-        }
-
-        .photography{
-            background-image: url('../images/desktop/image-photography.jpg');
-            @include backgroundPositioning();
-            padding: 20rem 6rem 3.5rem;
-            text-align: center;
-        }
-    }
-
-    .testimonials-section{
-        @include flex(row, space-between);
-
-        .testimonials{
-            width: 28%;
-        }
-    }
-
-    .top-footer{
-        img{
-            width: 24%;
-        }
-
-        @include grid(4);
-    }
-
-    .bottom-footer{
-        .logo{
-            width: 10%;
-        }
-    }
-
-} 
+.hidden {
+  display: none;
+}
